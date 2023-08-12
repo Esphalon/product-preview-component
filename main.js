@@ -9,8 +9,6 @@ function addToCart(){
   }
 }
 
-
-
 cartButton.addEventListener('click', addToCart);
 
 
