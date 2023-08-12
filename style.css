@@ -1,3 +1,160 @@
-h1{
-  font-size: 5rem;
+:root{
+  --clr-p-dark-cyan: hsl(158, 36%, 37%);
+  --clr-p-cream: hsl(30, 38%, 92%);
+
+  --clr-n-dark-blue:  hsl(212, 21%, 14%);
+  --clr-n-gray-blue: hsl(228, 12%, 48%);
+  --clr-n-white: hsl(0, 0%, 100%);
+
+  --fs-body:  .875rem;
+  --fs-header: 3rem;
+  --fs-button: 1rem;
+  --fs-new-price: 1.5rem;
+  --fs-old-price: .5rem;
+
+  --ff-body: 'Montserrat', sans-serif;
+  --ff-heading: 'Fraunces', serif;
 }
+
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility Classes */
+
+/* Layout */
+.even-columns{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media(min-width: 47em){
+  .even-columns{
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+/* Set Colors */
+.bg-clr-cyan{
+  background-color: var(--clr-p-dark-cyan);
+}
+.bg-clr-cream{
+  background-color: var(--clr-p-cream);
+}
+.bg-white{
+  background-color: var(--clr-n-white);
+}
+
+.clr-text-primary{
+  color: var(--clr-n-dark-blue);
+}
+.clr-text-secondary{
+  color: var(--clr-n-gray-blue);
+}
+.clr-text-highlight{
+  color: var(--clr-p-dark-cyan);
+}
+
+/* Set font style & sizes */
+
+.ff-body{
+  font-family: var(--ff-body)
+}
+.ff-heading{
+  font-family: var(--ff-heading);
+}
+
+.fs-body{
+  font-size: var(--ff-body);
+}
+.fs-header{
+  font-size: var(--fs-header);
+}
+.fs-button{
+  font-size: var(--fs-button);
+}
+.fs-new-price{
+  font-size: var(--fs-new-price);
+}
+.fs-old-price{
+  font-size: var(--fs-old-price);
+}
+
+/* Set padding */
+.padding-400{
+  padding: 1rem;
+}
+.padding-500{
+  padding: 2rem;
+}
+.padding-600{
+  padding: 3rem;
+}
+.padding-700{
+  padding: 4rem;
+}
+
+/* Custom CSS */
